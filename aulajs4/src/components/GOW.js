@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Gow (){
-    return<img src="https://galaxianerd.com/wp-content/uploads/2017/06/God-of-War.jpg"></img>
+    return <img src="https://media.playstation.com/is/image/SCEA/god-of-war-screen-05-ps4-us-12jun17?$native_nt$"></img>
 }
 
 export default Gow;

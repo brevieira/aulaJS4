@@ -4,7 +4,7 @@ import './App.css';
 
 import Menuburguer from './components/Menuburguer';
 import RDR2 from './components/RDR2';
-import gta from './components/gta';
+import Gta from './components/gta';
 import COD from './components/COD';
 import GOW from './components/GOW';
 
@@ -22,11 +22,30 @@ class App extends React.Component{
       selecionado: '',
     }
   }
-
+  games = (jogo) => {
+    this.setState({
+      selecionado: jogo ,
+    })
+  }
+  Jg = () =>{
+    switch(this.state.selecionado) {
+      case 'Cod':
+        return <COD/>
+      case ' Gow':
+        return <GOW/>
+      case 'Gta':
+        return <Gta/>
+      case 'Rdr2':
+        return <RDR2/>
+    }
+  }
   render (){
       return(
          <div className="menu">
-           <Menuburguer jogos ={this.state.jogos}/>
+           <Menuburguer 
+           jogos ={this.state.jogos}
+           jogo ={this.games}/>
+            {this.Jg()}
          </div>
       )  
   }

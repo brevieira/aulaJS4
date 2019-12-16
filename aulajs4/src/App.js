@@ -31,7 +31,7 @@ class App extends React.Component{
     switch(this.state.selecionado) {
       case 'Cod':
         return <COD/>
-      case ' Gow':
+      case 'Gow':
         return <GOW/>
       case 'Gta':
         return <Gta/>
@@ -41,11 +41,17 @@ class App extends React.Component{
   }
   render (){
       return(
-         <div className="menu">
-           <Menuburguer 
-           jogos ={this.state.jogos}
-           jogo ={this.games}/>
-            {this.Jg()}
+         <div className="tela">
+
+            <div>
+              <Menuburguer 
+              jogos ={this.state.jogos}
+              jogo ={this.games}/>
+            </div>
+            <div className="imagens">
+              {this.Jg()}
+            </div>
+
          </div>
       )  
   }
